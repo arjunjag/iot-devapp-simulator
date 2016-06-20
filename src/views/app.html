@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<title>Covisint</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<link rel="stylesheet" href="/css/device.css">
+		<script src="/js/device.js"></script>
+	</head>
+	<body ng-app="">
+		<!-- navigation begins -->
+		<nav class="navbar navbar-fixed-top" id="nav">
+			<div class="navbar-header" id="nav">
+				<a class="navbar-brand" href="#">
+					<img src="/images/logomark.png" id="logo">
+				</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Device </a></li>
+				<li class="active"><a href="App.html">Application<span class="sr-only">(current)</span></a></li>
+			</ul>
+			<div id="logout"><a href="#" title="Logout"><span class="glyphicon glyphicon-log-out"></span></a><div>
+		</nav>
+		<!-- navigation ends-->
+		<!-- drop down div begins -->
+		
+		<br/><br/><br/><br/><br/>
+		<div ng-show="deviceSelected">
+			<button type="button" class="btn btn-danger" id="streamButton" data-toggle="modal" data-target="#myModal"><h4>Stream information</h4><span class="glyphicon  glyphicon-menu-right"></span></button>
+			<div id="slideStreamInfo">
+				<h3> Stream Information </h3>
+				<form role="form">
+					<div class="form-group">
+						<textarea class="form-control"> </textarea>
+					</div>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+		</div>
+		<!-- right panel begins -->
+		
+		<div class="container">
+			<div class="dropdown" style="margin-left:45%;">
+				<span id="header">Application</span>
+				
+				<select id="devicesDropdown" ng-model="appSelected">
+					<option value="">Select Applications</option>
+					<option value="1">App1</option>
+				</select><br />
+				
+				<div ng-show="appSelected"><span id="header">Devices</span>
+					<select id="devicesDropdown" ng-model="deviceSelected">
+						<option value="">Select Devices</option>
+						<option value="2">Device 1</option>
+					</select>
+				</div>
+			</div>
+			<!-- drop down div ends -->
+			<!-- info table begins-->
+			<br /><br />
+			<div ng-show="deviceSelected">
+				<div class="deviceInfo">
+					<table class="table">
+						<tr>
+						<th>Events</th>
+						<th>Commands</th>
+						</tr>
+					</table>
+				</div>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<!-- info table ends-->
+				<!-- Accordian for logs begins -->
+				<button class="btn" id="logButton" style="width:100%"data-toggle="collapse" data-target="#demo">Logs &nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-down"></span></button>
+				<div id="demo" class="collapse">
+					<div class="jumbotron" id="table1">
+						<table width="100%">
+							<tr>
+								<td>
+									<table class="table" id="incomingTable">
+										<tr><th>Incoming<th></tr>
+									</table>
+								</td>
+								<td>
+									<table class="table" id="outgoingTable">
+										<tr><th>Outgoing</th>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+						<br/><br/><br/><br/><br/><br/>
+					</div>
+				</div>
+				<!-- Accordian for logs ends -->
+			</div>
+		</div>
+	</body>
+</html>

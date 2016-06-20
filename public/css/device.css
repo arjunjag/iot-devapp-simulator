@@ -1,0 +1,107 @@
+#nav,#logButton{
+	background-color:#009688;
+	color:white;
+}
+#font-color{
+	color:#009688;
+}
+/* #deviceDropDown{
+	display: block;
+    margin: 0 auto;
+} */
+th{
+text-align:center;
+}
+#logo{
+width:25%;
+margin:-10%;
+}
+#header{
+	font-family: "Oswald", Helvetica, Arial, sans-serif!important;
+	font-size:24px;
+	margin-right:2%;
+}
+option{
+	background-color:white;
+	color:black;
+}
+#devicesDropdown{
+	width:30%;
+	height:30px;
+	background-color:#1976D2;
+	color:white;
+	font-style:bold;
+	border-radius:5px;
+}
+.navbar-nav a{
+	color:white;
+}
+.navbar-nav .active{
+	font-weight:bold;
+}
+.navbar-nav a:hover{
+	color:black;
+	border-bottom:5px solid #0D47A1;
+}
+#logout{
+	text-align:right;
+	margin:10px 10px 10px 10px;
+	font-size:24px;
+	
+	/* border:1px solid black; */
+}
+#logout span{
+	color:white;
+}
+#logout span:hover{
+	color: #EEEEEE;
+}
+body{
+ 
+  /* background: #ECE8DF; */
+  /* background: url(http://subtlepatterns.com/patterns/extra_clean_paper.png) repeat; */
+  font-family: "Oswald", Helvetica, Arial, sans-serif!important;
+}
+h4{
+	transform: rotate(-90deg);
+	transform-origin: left top 30;
+	-webkit-transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+}
+#streamButton{
+	height:75%;
+	margin:10px 0px 10px 0px;
+	width:5px;
+	position:fixed;
+	z-index:2;
+}
+
+#streamButton span{
+	margin-left:-10px;
+}
+#slideStreamInfo
+	{
+    display: none;
+    background: white;
+	border:5px solid #009688;
+	border-radius:0 10% 10% 0;
+    color: black;
+	height:75%;
+	margin:10px 0 0 20px;
+	width:700px;
+	z-index:1;
+	position:fixed;	
+	background: url(http://subtlepatterns.com/patterns/extra_clean_paper.png) repeat;
+}
+textarea.form-control {
+  height: 50%;
+  width:80%;
+  margin-left:10%
+}
+#slideStreamInfo button,#slideStreamInfo h3{
+	margin: 0px auto;
+	display:block;
+	text-align:center;
+}
